@@ -15,18 +15,28 @@ $(document).ready(function(){
   function winCondition(){
 // function that determines win condition
     var winner;
-    var symbol;
-//horizontal condition
-    if (($box1.html()==symbol && $box2.html()==symbol && $box3.html()==symbol)||($box4.html()==symbol && $box5.html()==symbol && $box6.html()==symbol)||($box7.html()==symbol && $box8.html()==symbol && $box9.html()==symbol)) {
-      winner = symbol;
+//horizontal condition (O)
+    if (($box1.html()=='O' && $box2.html()=='O' && $box3.html()=='O')||($box4.html()=='O' && $box5.html()=='O' && $box6.html()=='O')||($box7.html()=='O' && $box8.html()=='O' && $box9.html()=='O')) {
+      winner = 'O';
     }
-//vertical condition
-    else if (($box1.html()==symbol && $box4.html()==symbol && $box7.html()==symbol)||($box2.html()==symbol && $box5.html()==symbol && $box8.html()==symbol)||($box3.html()==symbol && $box6.html()==symbol && $box9.html()==symbol)){
-      winner = symbol;
+//vertical condition (O)
+    else if (($box1.html()=='O' && $box4.html()=='O' && $box7.html()=='O')||($box2.html()=='O' && $box5.html()=='O' && $box8.html()=='O')||($box3.html()=='O' && $box6.html()=='O' && $box9.html()=='O')){
+      winner = 'O';
     }
-//diagonal condition
-    else if (($box1.html()==symbol && $box5.html()==symbol && $box9.html()==symbol)||($box3.html()==symbol && $box5.html()==symbol && $box7.html()==symbol)){
-      winner = symbol;
+//diagonal condition (O)
+    else if (($box1.html()=='O' && $box5.html()=='O' && $box9.html()=='O')||($box3.html()=='O' && $box5.html()=='O' && $box7.html()=='O')){
+      winner = 'O';
+//horizontal condition (X)
+    } else if (($box1.html()=='X' && $box2.html()=='X' && $box3.html()=='X')||($box4.html()=='X' && $box5.html()=='X' && $box6.html()=='X')||($box7.html()=='X' && $box8.html()=='X' && $box9.html()=='X')) {
+      winner = 'X';
+    }
+//vertical condition (X)
+    else if (($box1.html()=='X' && $box4.html()=='X' && $box7.html()=='X')||($box2.html()=='X' && $box5.html()=='X' && $box8.html()=='X')||($box3.html()=='X' && $box6.html()=='X' && $box9.html()=='X')){
+      winner = 'X';
+    }
+//diagonal condition (X)
+    else if (($box1.html()=='X' && $box5.html()=='X' && $box9.html()=='X')||($box3.html()=='X' && $box5.html()=='X' && $box7.html()=='X')) {
+      winner = 'X';
     } else {
       winner = 'nobody'
     }
