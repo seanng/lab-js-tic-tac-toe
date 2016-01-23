@@ -12,9 +12,10 @@ $(document).ready(function(){
   var player = 'X';
   var symbol;
 
-  function winCondition(symbol){
+  function winCondition(){
 // function that determines win condition
     var winner;
+    var symbol;
 //horizontal condition
     if (($box1.html()==symbol && $box2.html()==symbol && $box3.html()==symbol)||($box4.html()==symbol && $box5.html()==symbol && $box6.html()==symbol)||($box7.html()==symbol && $box8.html()==symbol && $box9.html()==symbol)) {
       winner = symbol;
